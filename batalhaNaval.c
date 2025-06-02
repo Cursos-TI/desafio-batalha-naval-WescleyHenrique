@@ -9,6 +9,7 @@ int main() {
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
     char Batalha [10][10] = {  //Tabuleiro no tamanho 10x10
+    int Navios[2] = {3,3};  //Dois navios 
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
