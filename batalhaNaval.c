@@ -8,11 +8,35 @@
 int main() {
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
-    char Batalha [10][10] = {  //Tabuleiro no tamanho 10x10
-    int Navios[2] = {3,3};  //Dois navios 
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
+    int Navios[2] = {3,3};  //Dois navios
+    char Batalha [10][10] = {  //Tabuleiro no tamanho 10x10 
+
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
+        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'}
+
+    };
+
+    //Navios 'N' adicionados na vertical
+    Batalha[7][0] = 'N';
+    Batalha[8][0] = 'N';
+    Batalha[9][0] = 'N';
+
+    //Navios 'N' adicionados na horizontal
+    Batalha[4][3] = 'N';
+    Batalha[4][4] = 'N';
+    Batalha[4][5] = 'N';
+    
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
     // Sugestão: Posicione quatro navios no tabuleiro, incluindo dois na diagonal.
