@@ -36,6 +36,15 @@ int main() {
     Batalha[4][3] = 'N';
     Batalha[4][4] = 'N';
     Batalha[4][5] = 'N';
+
+    //Para visualizar o tabuleiro e confirmar o posicionamento
+    printf("Tabuleiro de Batalha:\n");
+    for (int y = 0; y < 10; y++) {
+        for (int x = 0; x < 10; x++) {
+            printf("%c ", Batalha[y][x]);
+        }
+        printf("\n"); // Quebra de linha para a próxima linha do tabuleiro
+    }
     
     // Nível Aventureiro - Expansão do Tabuleiro e Posicionamento Diagonal
     // Sugestão: Expanda o tabuleiro para uma matriz 10x10.
