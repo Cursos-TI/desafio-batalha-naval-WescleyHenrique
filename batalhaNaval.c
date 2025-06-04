@@ -6,7 +6,7 @@
 // Siga os comentários para implementar cada parte do desafio.
 
 #define LINHA 10
-#define coluna 10
+#define COLUNA 10
 
 int main() {
     // Nível Novato - Posicionamento dos Navios
@@ -14,21 +14,15 @@ int main() {
     // Sugestão: Posicione dois navios no tabuleiro, um verticalmente e outro horizontalmente.
     // Sugestão: Utilize `printf` para exibir as coordenadas de cada parte dos navios.
 
-    int Navios[2] = {3,3};  //Dois navios
-    char Batalha [10][10] = {  //Tabuleiro no tamanho 10x10 
+    char Batalha [LINHA][COLUNA];
 
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'},
-        {'0', '0', '0', '0', '0', '0', '0', '0', '0', '0'}
+    for (int i = 0; i < LINHA; i++) {
+        for (int j = 0; j < COLUNA; j++) {
+            Batalha [i][j] = '0';
 
-    };
+        }
+        
+    }
 
     //Navios 'N' adicionados na vertical
     Batalha[7][0] = 'N';
