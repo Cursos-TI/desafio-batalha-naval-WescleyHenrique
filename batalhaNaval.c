@@ -161,7 +161,7 @@ int main() {
     imprimirTabuleiro(Batalha);
     printf("\n");
 
-    // Ponto de origem para a Habilidade CRUZ (ex: linha 7, coluna 7)
+    // Ponto de origem para a Habilidade CRUZ (ex linha 7, coluna 7)
     int origem_cruz_linha = 7;
     int origem_cruz_coluna = 7;
     aplicarHabilidade(habilidadeCruz, origem_cruz_linha, origem_cruz_coluna, Batalha);
