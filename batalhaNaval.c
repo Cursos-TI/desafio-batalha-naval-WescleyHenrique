@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h> // Para a função abs
 
 // Desafio Batalha Naval - MateCheck
 // Este código inicial serve como base para o desenvolvimento do sistema de Batalha Naval.
@@ -7,6 +8,7 @@
 
 #define LINHA 10
 #define COLUNA 10
+#define TAMANHO_HABILIDADE 5 // Tamanho das matrizes de habilidade (ex: 5x5)
 
 int main() {
     // Nível Novato - Posicionamento dos Navios
