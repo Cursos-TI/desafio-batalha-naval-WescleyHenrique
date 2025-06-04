@@ -10,6 +10,19 @@
 #define COLUNA 10
 #define TAMANHO_HABILIDADE 5 // Tamanho das matrizes de habilidade (ex: 5x5)
 
+// Função para imprimir o tabuleiro
+// Recebe o tabuleiro como parâmetro para imprimir seu estado atual
+void imprimirTabuleiro(char tabuleiro[LINHA][COLUNA]) {
+    for (int y = 0; y < LINHA; y++) {
+        for (int x = 0; x < COLUNA; x++) {
+            printf("%c ", tabuleiro[y][x]); // Imprime o caractere da posição
+        }
+        printf("\n"); // Quebra de linha após cada linha do tabuleiro
+    }
+}
+
+
+
 int main() {
     // Nível Novato - Posicionamento dos Navios
     // Sugestão: Declare uma matriz bidimensional para representar o tabuleiro (Ex: int tabuleiro[5][5];).
