@@ -21,6 +21,41 @@ void imprimirTabuleiro(char tabuleiro[LINHA][COLUNA]) {
     }
 }
 
+// Função para aplicar uma habilidade ao tabuleiro
+// habilidade_matriz: a matriz 0/1 que define a forma da habilidade
+// origem_linha, origem_coluna: o ponto central da aplicação da habilidade no tabuleiro principal
+// tabuleiro_principal: o tabuleiro onde a habilidade será aplicada
+void aplicarHabilidade(int habilidade_matriz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE],
+                       int origem_linha, int origem_coluna,
+                       char tabuleiro_principal[LINHA][COLUNA]) {
+
+    // Calcula o centro da matriz da habilidade para centralizar a aplicação
+    int centro_habilidade = TAMANHO_HABILIDADE / 2;
+
+    // Itera sobre cada célula da matriz da habilidade
+    for (int h_linha = 0; h_linha < TAMANHO_HABILIDADE; h_linha++) {
+        for (int h_coluna = 0; h_coluna < TAMANHO_HABILIDADE; h_coluna++) {
+            // Se a posição na matriz da habilidade é '1' (parte da área de efeito)
+            if (habilidade_matriz[h_linha][h_coluna] == 1) {
+                // Calcula as coordenadas correspondentes no tabuleiro principal
+                // Ajusta a posição da habilidade para que seu centro coincida com 'origem_linha' e 'origem_coluna'
+                int t_linha = origem_linha + (h_linha - centro_habilidade);
+                int t_coluna = origem_coluna + (h_coluna - centro_habilidade);
+
+                // Verifica se as coordenadas calculadas estão dentro dos limites do tabuleiro principal
+                if (t_linha >= 0 && t_linha < LINHA &&
+                    t_coluna >= 0 && t_coluna < COLUNA) {
+                    // Se a posição no tabuleiro não for um navio ('N'), marca como área afetada ('5')
+                    // Isso evita sobrescrever navios com a marca de habilidade
+                    if (tabuleiro_principal[t_linha][t_coluna] != 'N') {
+                        tabuleiro_principal[t_linha][t_coluna] = '5';
+                    }
+                }
+            }
+        }
+    }
+}
+
 
 
 int main() {
