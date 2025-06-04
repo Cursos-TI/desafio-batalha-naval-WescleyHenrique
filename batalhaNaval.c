@@ -34,8 +34,17 @@ int main() {
     Batalha[4][4] = 'N';
     Batalha[4][5] = 'N';
 
+    // Navio 'N' adicionado na diagonal 
+    Batalha[6][6] = 'N';
+    Batalha[7][7] = 'N';
+    Batalha[8][8] = 'N';
+    // Navio 'N' adicionado na diagonal 
+    Batalha[1][3] = 'N';
+    Batalha[2][4] = 'N';
+    Batalha[3][5] = 'N';
+
     //Para visualizar o tabuleiro e confirmar o posicionamento
-    printf("Tabuleiro de Batalha:\n");
+    printf("TABULEIRO DE BATALHA NAVAL:\n");
     for (int y = 0; y < 10; y++) {
         for (int x = 0; x < 10; x++) {
             printf("%c ", Batalha[y][x]);
