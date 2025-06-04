@@ -151,6 +151,31 @@ int main() {
         }
     }
 
+     // --- APLICANDO HABILIDADES AO TABULEIRO ---
+
+    // Ponto de origem para a Habilidade CONE (ex: linha 2, coluna 2)
+    int origem_cone_linha = 2;
+    int origem_cone_coluna = 2;
+    aplicarHabilidade(habilidadeCone, origem_cone_linha, origem_cone_coluna, Batalha);
+    printf("--- TABULEIRO COM HABILIDADE CONE (Origem: [%d,%d]) ---\n", origem_cone_linha, origem_cone_coluna);
+    imprimirTabuleiro(Batalha);
+    printf("\n");
+
+    // Ponto de origem para a Habilidade CRUZ (ex: linha 7, coluna 7)
+    int origem_cruz_linha = 7;
+    int origem_cruz_coluna = 7;
+    aplicarHabilidade(habilidadeCruz, origem_cruz_linha, origem_cruz_coluna, Batalha);
+    printf("--- TABULEIRO COM HABILIDADE CRUZ (Origem: [%d,%d]) ---\n", origem_cruz_linha, origem_cruz_coluna);
+    imprimirTabuleiro(Batalha);
+    printf("\n");
+
+    // Ponto de origem para a Habilidade OCTAEDRO (ex: linha 5, coluna 0)
+    int origem_octa_linha = 5;
+    int origem_octa_coluna = 0;
+    aplicarHabilidade(habilidadeOctaedro, origem_octa_linha, origem_octa_coluna, Batalha);
+    printf("--- TABULEIRO COM HABILIDADE OCTAEDRO (Origem: [%d,%d]) ---\n", origem_octa_linha, origem_octa_coluna);
+    imprimirTabuleiro(Batalha);
+    printf("\n");
     
     
 
