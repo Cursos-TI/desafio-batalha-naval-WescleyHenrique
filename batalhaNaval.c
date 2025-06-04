@@ -108,7 +108,7 @@ int main() {
     int habilidadeCone[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE];
     for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
         for (int j = 0; j < TAMANHO_HABILIDADE; j++) {
-            habilidadeCone[i][j] = 0; // Inicializa a matriz do cone com 0s
+            habilidadeCone[i][j] = 0; // Inicializa a matriz do cone
         }
     }
     
