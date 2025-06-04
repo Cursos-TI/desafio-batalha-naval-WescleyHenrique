@@ -133,6 +133,24 @@ int main() {
         habilidadeCruz[centro_cruz_habilidade][i] = 1; // Linha central
         habilidadeCruz[i][centro_cruz_habilidade] = 1; // Coluna central
     }
+
+    // MATRIZ DE HABILIDADE: OCTAEDRO (LOSANGO)
+    int habilidadeOctaedro[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE];
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (int j = 0; j < TAMANHO_HABILIDADE; j++) {
+            habilidadeOctaedro[i][j] = 0; // Inicializa a matriz do octaedro com 0s
+        }
+    }
+    int centro_octa_habilidade = TAMANHO_HABILIDADE / 2;
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        int dist = abs(i - centro_octa_habilidade);
+        for (int j = centro_octa_habilidade - (centro_octa_habilidade - dist); j <= centro_octa_habilidade + (centro_octa_habilidade - dist); j++) {
+            if (j >= 0 && j < TAMANHO_HABILIDADE) {
+                habilidadeOctaedro[i][j] = 1; // Preenche a área do octaedro
+            }
+        }
+    }
+
     
     
 
