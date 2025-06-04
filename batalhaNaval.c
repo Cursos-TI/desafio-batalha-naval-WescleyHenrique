@@ -111,6 +111,28 @@ int main() {
             habilidadeCone[i][j] = 0; // Inicializa a matriz do cone
         }
     }
+
+    int centro_cone_habilidade = TAMANHO_HABILIDADE / 2;
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (int j = centro_cone_habilidade - i; j <= centro_cone_habilidade + i; j++) {
+            if (j >= 0 && j < TAMANHO_HABILIDADE) {
+                habilidadeCone[i][j] = 1; // Preenche a área do cone
+            }
+        }
+    }
+
+    // MATRIZ DE HABILIDADE: CRUZ
+    int habilidadeCruz[TAMANHO_HABILIDADE][TAMANHO_HABILIDADE];
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        for (int j = 0; j < TAMANHO_HABILIDADE; j++) {
+            habilidadeCruz[i][j] = 0; // Inicializa a matriz da cruz com 0s
+        }
+    }
+    int centro_cruz_habilidade = TAMANHO_HABILIDADE / 2;
+    for (int i = 0; i < TAMANHO_HABILIDADE; i++) {
+        habilidadeCruz[centro_cruz_habilidade][i] = 1; // Linha central
+        habilidadeCruz[i][centro_cruz_habilidade] = 1; // Coluna central
+    }
     
     
 
